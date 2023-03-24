@@ -1,0 +1,13 @@
+﻿@model UserViewModel
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Enter your name below</h1>
+    <form asp-controller="" asp-action="SayHello" method="post">
+        <input type="text" class="form-control" asp-for=Name pattern="[a-zA-ZА-Яа-яІЇҐіїґ]+" maxlength="20" required />
+        <button type="submit" class="btn btn-outline-dark" asp-action="SayHello">Sumbit</button>
+    </form>
+</div>
